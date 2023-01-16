@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ro.mycode</groupId>
-	<artifactId>project-api</artifactId>
+	<artifactId>employersApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>project-api</name>
 	<description>project</description>
