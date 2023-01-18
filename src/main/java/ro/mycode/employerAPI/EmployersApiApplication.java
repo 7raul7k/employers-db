@@ -1,11 +1,11 @@
-package ro.mycode.projectapi;
+package ro.mycode.employerAPI;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import service.EmployeeService;
-import view.ViewEmployer;
+import ro.mycode.employerAPI.repo.EmployerRepo;
+import ro.mycode.employerAPI.view.ViewEmployer;
 
 @SpringBootApplication
 public class EmployersApiApplication {
@@ -18,9 +18,12 @@ public class EmployersApiApplication {
 	CommandLineRunner commandLineRunner(ViewEmployer viewEmployer){
 		return args -> {
 
+
 			viewEmployer.play();
+
 
 		};
 
 	}
+
 }

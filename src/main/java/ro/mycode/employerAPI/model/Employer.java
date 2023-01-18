@@ -1,4 +1,4 @@
-package model;
+package ro.mycode.employerAPI.model;
 
 
 import lombok.AllArgsConstructor;
@@ -28,11 +28,11 @@ public class Employer implements Comparable<Employer> {
 
     private String email;
     private String adress;
-    private double salary;
+    private int salary;
     private String department;
 
 
-    public Employer(String firstName, String lastName, String gender, String email, String adress, double salary, String department) {
+    public Employer(String firstName, String lastName, String gender, String email, String adress, int salary, String department) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -44,7 +44,17 @@ public class Employer implements Comparable<Employer> {
 
     @Override
     public String toString(){
-        return firstName+","+lastName+","+gender+","+email+","+adress+","+salary+","+department;
+        String text = "";
+        text += "ID: " + id;
+        text += "\nFirst name: "+firstName;
+        text += "\n Last name: " + lastName;
+        text += "\n Gender: " + gender;
+        text += "\n Email: "+ email;
+        text += "\n Adress: " + adress;
+        text += "\n Salary: $ " + salary;
+        text += "\n Department: " + department;
+        text += "\n======================================\n";
+        return text;
     }
 
     @Override

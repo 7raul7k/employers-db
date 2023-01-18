@@ -11,7 +11,7 @@
 	<groupId>ro.mycode</groupId>
 	<artifactId>employersApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>project-api</name>
+	<name>employerAPI</name>
 	<description>project</description>
 	<properties>
 		<java.version>11</java.version>
