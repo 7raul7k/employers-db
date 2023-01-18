@@ -8,6 +8,7 @@ import ro.mycode.employerAPI.model.Employer;
 import org.springframework.stereotype.Service;
 import ro.mycode.employerAPI.repo.EmployerRepo;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 
@@ -54,6 +55,41 @@ public class EmployeeService {
             return false;
         }
         return true;
+    }
+
+    @Transactional
+    public void updateGender(String firstName,String lastName,String newGender){
+
+            this.employerRepo.updateGender(newGender,firstName,lastName);
+
+    }
+
+    @Transactional
+    public void updateEmail(String firstName,String lastName,String email){
+
+            this.employerRepo.updateEmail(email,firstName,lastName);
+
+
+    }
+
+    @Transactional
+    public void updateAdress(String firstName,String lastName,String adress){
+
+
+            this.employerRepo.updateAdress(adress,firstName,lastName);
+
+    }
+
+    @Transactional
+    public void updateSalary(String firstName,String lastName,int salary){
+
+       this.employerRepo.updateSalary(salary,firstName,lastName);
+
+    }
+
+    @Transactional
+    public void updateDepartment(String firstName,String lastName,String department){
+        this.employerRepo.updateDepartment(department,firstName,lastName);
     }
 
 
